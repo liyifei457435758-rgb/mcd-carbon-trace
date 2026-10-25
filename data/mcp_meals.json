@@ -1,0 +1,994 @@
+{
+  "metadata": {
+    "source": "McDonald's MCP query-meals + query-meal-detail",
+    "store_code": "1951020",
+    "fetched_at": "2026-10-25T08:40:21.128922+00:00",
+    "recipe_weight_status": "estimated; MCP does not disclose supplier recipe grams"
+  },
+  "meals": [
+    {
+      "id": "mcp-9900005466",
+      "name": "巨无霸三件套",
+      "tier": "三件套",
+      "protein": "牛肉",
+      "description": "MCP 默认搭配：巨无霸 / 中薯条 / 可乐中杯",
+      "mcp_code": "9900005466",
+      "source": "MCP live menu · store 1951020 · 2026-10-25T08:40:21.128922+00:00",
+      "tags": [
+        "MCP实时",
+        "牛肉",
+        "三件套"
+      ],
+      "components": [
+        {
+          "name": "蛋白质主料",
+          "quantity_kg": 0.105,
+          "factor_id": "beef",
+          "display": "蛋白质主料"
+        },
+        {
+          "name": "面包胚",
+          "quantity_kg": 0.075,
+          "factor_id": "bun",
+          "display": "面包胚"
+        },
+        {
+          "name": "奶酪/蔬菜/酱料估算",
+          "quantity_kg": 0.042,
+          "factor_id": "sauce",
+          "display": "蔬菜与酱料"
+        },
+        {
+          "name": "薯条马铃薯",
+          "quantity_kg": 0.13,
+          "factor_id": "potato",
+          "display": "默认薯条"
+        },
+        {
+          "name": "饮料",
+          "quantity_kg": 0.3,
+          "factor_id": "cola",
+          "display": "默认饮料"
+        }
+      ],
+      "transport_mass_kg": 0.72,
+      "transport_distance_km": 180,
+      "packaging_kg": 0.05,
+      "store_kwh": 0.18,
+      "labor_scenario": "delivery-default",
+      "labor_chain": [
+        {
+          "id": "farm",
+          "label": "养殖 / 种植分摊",
+          "minutes": 4
+        },
+        {
+          "id": "central-kitchen",
+          "label": "中央厨房与加工",
+          "minutes": 7
+        },
+        {
+          "id": "logistics",
+          "label": "仓储与干线运输",
+          "minutes": 2
+        },
+        {
+          "id": "store-receiving",
+          "label": "门店收货",
+          "minutes": 1.5
+        },
+        {
+          "id": "cashier",
+          "label": "收银与接单",
+          "minutes": 1
+        },
+        {
+          "id": "cooking",
+          "label": "汉堡与薯条制作",
+          "minutes": 4
+        },
+        {
+          "id": "packing",
+          "label": "组装与包装",
+          "minutes": 2
+        },
+        {
+          "id": "delivery",
+          "label": "司机与末端配送",
+          "minutes": 7
+        }
+      ],
+      "labor_hours": 0.475,
+      "menu_price_rmb": 42.0,
+      "cost_rmb": 47.28,
+      "cost_model": {
+        "scenario": "full-chain-screening-v1",
+        "currency": "CNY",
+        "total_rmb": 47.28,
+        "lines": [
+          {
+            "id": "raw-materials",
+            "label": "原料采购与初级产品",
+            "amount": 6.75,
+            "basis": "各原料 kg × 原料采购价"
+          },
+          {
+            "id": "farm-inputs",
+            "label": "农场 / 饲料 / 灌溉投入",
+            "amount": 6.07,
+            "basis": "原料采购价 × 90% 上游投入情景"
+          },
+          {
+            "id": "processing",
+            "label": "中央厨房 / 加工",
+            "amount": 5.54,
+            "basis": "原料价 × 45% + 每份加工固定投入"
+          },
+          {
+            "id": "cold-chain",
+            "label": "仓储 / 冷链",
+            "amount": 1.01,
+            "basis": "运输质量 kg × ¥1.40"
+          },
+          {
+            "id": "transport",
+            "label": "干线运输",
+            "amount": 2.04,
+            "basis": "t·km × ¥6.50 + 车辆调度分摊"
+          },
+          {
+            "id": "store-facility",
+            "label": "门店装修 / 灶台设备折旧",
+            "amount": 12.0,
+            "basis": "农场、加工线、门店设备与装修的订单分摊"
+          },
+          {
+            "id": "utilities",
+            "label": "煤气 / 电力 / 用水",
+            "amount": 1.16,
+            "basis": "门店 kWh × ¥2.30 + 燃气与用水情景"
+          },
+          {
+            "id": "store-labor",
+            "label": "门店收货 / 收银 / 制作 / 包装人工",
+            "amount": 4.53,
+            "basis": "门店 person-minutes × ¥32/h"
+          },
+          {
+            "id": "packaging",
+            "label": "外包装纸 / 印刷",
+            "amount": 2.6,
+            "basis": "包装 kg × ¥32 + 印刷与耗材"
+          },
+          {
+            "id": "delivery",
+            "label": "司机 / 末端配送",
+            "amount": 5.58,
+            "basis": "配送 person-minutes × ¥35/h + 车辆末端分摊"
+          }
+        ],
+        "note": "非麦当劳财务数据；MCP 未提供供应商发票、工资、租金或折旧，金额为可替换的项目情景。"
+      }
+    },
+    {
+      "id": "mcp-9900016055",
+      "name": "开心亲子双人餐",
+      "tier": "双人餐",
+      "protein": "鸡肉",
+      "description": "MCP 默认搭配：板烧鸡腿堡 / 麦乐鸡-4块 / 小杯玉米杯 / 苹果片一袋(60g) / 中薯条",
+      "mcp_code": "9900016055",
+      "source": "MCP live menu · store 1951020 · 2026-10-25T08:40:21.128922+00:00",
+      "tags": [
+        "MCP实时",
+        "鸡肉",
+        "双人餐"
+      ],
+      "components": [
+        {
+          "name": "蛋白质主料",
+          "quantity_kg": 0.21,
+          "factor_id": "chicken",
+          "display": "蛋白质主料"
+        },
+        {
+          "name": "面包胚",
+          "quantity_kg": 0.15,
+          "factor_id": "bun",
+          "display": "面包胚"
+        },
+        {
+          "name": "奶酪/蔬菜/酱料估算",
+          "quantity_kg": 0.084,
+          "factor_id": "sauce",
+          "display": "蔬菜与酱料"
+        },
+        {
+          "name": "薯条马铃薯",
+          "quantity_kg": 0.26,
+          "factor_id": "potato",
+          "display": "默认薯条"
+        },
+        {
+          "name": "饮料",
+          "quantity_kg": 0.6,
+          "factor_id": "cola",
+          "display": "默认饮料"
+        }
+      ],
+      "transport_mass_kg": 1.44,
+      "transport_distance_km": 180,
+      "packaging_kg": 0.1,
+      "store_kwh": 0.36,
+      "labor_scenario": "delivery-default",
+      "labor_chain": [
+        {
+          "id": "farm",
+          "label": "养殖 / 种植分摊",
+          "minutes": 8
+        },
+        {
+          "id": "central-kitchen",
+          "label": "中央厨房与加工",
+          "minutes": 14
+        },
+        {
+          "id": "logistics",
+          "label": "仓储与干线运输",
+          "minutes": 4
+        },
+        {
+          "id": "store-receiving",
+          "label": "门店收货",
+          "minutes": 3.0
+        },
+        {
+          "id": "cashier",
+          "label": "收银与接单",
+          "minutes": 1
+        },
+        {
+          "id": "cooking",
+          "label": "汉堡与薯条制作",
+          "minutes": 8
+        },
+        {
+          "id": "packing",
+          "label": "组装与包装",
+          "minutes": 4
+        },
+        {
+          "id": "delivery",
+          "label": "司机与末端配送",
+          "minutes": 7
+        }
+      ],
+      "labor_hours": 0.817,
+      "menu_price_rmb": 64.5,
+      "cost_rmb": 69.36,
+      "cost_model": {
+        "scenario": "full-chain-screening-v1",
+        "currency": "CNY",
+        "total_rmb": 69.36,
+        "lines": [
+          {
+            "id": "raw-materials",
+            "label": "原料采购与初级产品",
+            "amount": 9.71,
+            "basis": "各原料 kg × 原料采购价"
+          },
+          {
+            "id": "farm-inputs",
+            "label": "农场 / 饲料 / 灌溉投入",
+            "amount": 8.74,
+            "basis": "原料采购价 × 90% 上游投入情景"
+          },
+          {
+            "id": "processing",
+            "label": "中央厨房 / 加工",
+            "amount": 9.37,
+            "basis": "原料价 × 45% + 每份加工固定投入"
+          },
+          {
+            "id": "cold-chain",
+            "label": "仓储 / 冷链",
+            "amount": 2.02,
+            "basis": "运输质量 kg × ¥1.40"
+          },
+          {
+            "id": "transport",
+            "label": "干线运输",
+            "amount": 2.88,
+            "basis": "t·km × ¥6.50 + 车辆调度分摊"
+          },
+          {
+            "id": "store-facility",
+            "label": "门店装修 / 灶台设备折旧",
+            "amount": 16.0,
+            "basis": "农场、加工线、门店设备与装修的订单分摊"
+          },
+          {
+            "id": "utilities",
+            "label": "煤气 / 电力 / 用水",
+            "amount": 2.33,
+            "basis": "门店 kWh × ¥2.30 + 燃气与用水情景"
+          },
+          {
+            "id": "store-labor",
+            "label": "门店收货 / 收银 / 制作 / 包装人工",
+            "amount": 8.53,
+            "basis": "门店 person-minutes × ¥32/h"
+          },
+          {
+            "id": "packaging",
+            "label": "外包装纸 / 印刷",
+            "amount": 4.2,
+            "basis": "包装 kg × ¥32 + 印刷与耗材"
+          },
+          {
+            "id": "delivery",
+            "label": "司机 / 末端配送",
+            "amount": 5.58,
+            "basis": "配送 person-minutes × ¥35/h + 车辆末端分摊"
+          }
+        ],
+        "note": "非麦当劳财务数据；MCP 未提供供应商发票、工资、租金或折旧，金额为可替换的项目情景。"
+      }
+    },
+    {
+      "id": "mcp-9900005462",
+      "name": "板烧鸡腿堡三件套",
+      "tier": "三件套",
+      "protein": "鸡肉",
+      "description": "MCP 默认搭配：板烧鸡腿堡 / 中薯条 / 可乐中杯",
+      "mcp_code": "9900005462",
+      "source": "MCP live menu · store 1951020 · 2026-10-25T08:40:21.128922+00:00",
+      "tags": [
+        "MCP实时",
+        "鸡肉",
+        "三件套"
+      ],
+      "components": [
+        {
+          "name": "蛋白质主料",
+          "quantity_kg": 0.105,
+          "factor_id": "chicken",
+          "display": "蛋白质主料"
+        },
+        {
+          "name": "面包胚",
+          "quantity_kg": 0.075,
+          "factor_id": "bun",
+          "display": "面包胚"
+        },
+        {
+          "name": "奶酪/蔬菜/酱料估算",
+          "quantity_kg": 0.042,
+          "factor_id": "sauce",
+          "display": "蔬菜与酱料"
+        },
+        {
+          "name": "薯条马铃薯",
+          "quantity_kg": 0.13,
+          "factor_id": "potato",
+          "display": "默认薯条"
+        },
+        {
+          "name": "饮料",
+          "quantity_kg": 0.3,
+          "factor_id": "cola",
+          "display": "默认饮料"
+        }
+      ],
+      "transport_mass_kg": 0.72,
+      "transport_distance_km": 180,
+      "packaging_kg": 0.05,
+      "store_kwh": 0.18,
+      "labor_scenario": "delivery-default",
+      "labor_chain": [
+        {
+          "id": "farm",
+          "label": "养殖 / 种植分摊",
+          "minutes": 4
+        },
+        {
+          "id": "central-kitchen",
+          "label": "中央厨房与加工",
+          "minutes": 7
+        },
+        {
+          "id": "logistics",
+          "label": "仓储与干线运输",
+          "minutes": 2
+        },
+        {
+          "id": "store-receiving",
+          "label": "门店收货",
+          "minutes": 1.5
+        },
+        {
+          "id": "cashier",
+          "label": "收银与接单",
+          "minutes": 1
+        },
+        {
+          "id": "cooking",
+          "label": "汉堡与薯条制作",
+          "minutes": 4
+        },
+        {
+          "id": "packing",
+          "label": "组装与包装",
+          "minutes": 2
+        },
+        {
+          "id": "delivery",
+          "label": "司机与末端配送",
+          "minutes": 7
+        }
+      ],
+      "labor_hours": 0.475,
+      "menu_price_rmb": 38.5,
+      "cost_rmb": 42.83,
+      "cost_model": {
+        "scenario": "full-chain-screening-v1",
+        "currency": "CNY",
+        "total_rmb": 42.83,
+        "lines": [
+          {
+            "id": "raw-materials",
+            "label": "原料采购与初级产品",
+            "amount": 4.86,
+            "basis": "各原料 kg × 原料采购价"
+          },
+          {
+            "id": "farm-inputs",
+            "label": "农场 / 饲料 / 灌溉投入",
+            "amount": 4.37,
+            "basis": "原料采购价 × 90% 上游投入情景"
+          },
+          {
+            "id": "processing",
+            "label": "中央厨房 / 加工",
+            "amount": 4.68,
+            "basis": "原料价 × 45% + 每份加工固定投入"
+          },
+          {
+            "id": "cold-chain",
+            "label": "仓储 / 冷链",
+            "amount": 1.01,
+            "basis": "运输质量 kg × ¥1.40"
+          },
+          {
+            "id": "transport",
+            "label": "干线运输",
+            "amount": 2.04,
+            "basis": "t·km × ¥6.50 + 车辆调度分摊"
+          },
+          {
+            "id": "store-facility",
+            "label": "门店装修 / 灶台设备折旧",
+            "amount": 12.0,
+            "basis": "农场、加工线、门店设备与装修的订单分摊"
+          },
+          {
+            "id": "utilities",
+            "label": "煤气 / 电力 / 用水",
+            "amount": 1.16,
+            "basis": "门店 kWh × ¥2.30 + 燃气与用水情景"
+          },
+          {
+            "id": "store-labor",
+            "label": "门店收货 / 收银 / 制作 / 包装人工",
+            "amount": 4.53,
+            "basis": "门店 person-minutes × ¥32/h"
+          },
+          {
+            "id": "packaging",
+            "label": "外包装纸 / 印刷",
+            "amount": 2.6,
+            "basis": "包装 kg × ¥32 + 印刷与耗材"
+          },
+          {
+            "id": "delivery",
+            "label": "司机 / 末端配送",
+            "amount": 5.58,
+            "basis": "配送 person-minutes × ¥35/h + 车辆末端分摊"
+          }
+        ],
+        "note": "非麦当劳财务数据；MCP 未提供供应商发票、工资、租金或折旧，金额为可替换的项目情景。"
+      }
+    },
+    {
+      "id": "mcp-9900005411",
+      "name": "不素之霸双层牛堡三件套",
+      "tier": "三件套",
+      "protein": "牛肉",
+      "description": "MCP 默认搭配：不素之霸双层牛堡 / 中薯条 / 可乐中杯",
+      "mcp_code": "9900005411",
+      "source": "MCP live menu · store 1951020 · 2026-10-25T08:40:21.128922+00:00",
+      "tags": [
+        "MCP实时",
+        "牛肉",
+        "三件套"
+      ],
+      "components": [
+        {
+          "name": "蛋白质主料",
+          "quantity_kg": 0.105,
+          "factor_id": "beef",
+          "display": "蛋白质主料"
+        },
+        {
+          "name": "面包胚",
+          "quantity_kg": 0.075,
+          "factor_id": "bun",
+          "display": "面包胚"
+        },
+        {
+          "name": "奶酪/蔬菜/酱料估算",
+          "quantity_kg": 0.042,
+          "factor_id": "sauce",
+          "display": "蔬菜与酱料"
+        },
+        {
+          "name": "薯条马铃薯",
+          "quantity_kg": 0.13,
+          "factor_id": "potato",
+          "display": "默认薯条"
+        },
+        {
+          "name": "饮料",
+          "quantity_kg": 0.3,
+          "factor_id": "cola",
+          "display": "默认饮料"
+        }
+      ],
+      "transport_mass_kg": 0.72,
+      "transport_distance_km": 180,
+      "packaging_kg": 0.05,
+      "store_kwh": 0.18,
+      "labor_scenario": "delivery-default",
+      "labor_chain": [
+        {
+          "id": "farm",
+          "label": "养殖 / 种植分摊",
+          "minutes": 4
+        },
+        {
+          "id": "central-kitchen",
+          "label": "中央厨房与加工",
+          "minutes": 7
+        },
+        {
+          "id": "logistics",
+          "label": "仓储与干线运输",
+          "minutes": 2
+        },
+        {
+          "id": "store-receiving",
+          "label": "门店收货",
+          "minutes": 1.5
+        },
+        {
+          "id": "cashier",
+          "label": "收银与接单",
+          "minutes": 1
+        },
+        {
+          "id": "cooking",
+          "label": "汉堡与薯条制作",
+          "minutes": 4
+        },
+        {
+          "id": "packing",
+          "label": "组装与包装",
+          "minutes": 2
+        },
+        {
+          "id": "delivery",
+          "label": "司机与末端配送",
+          "minutes": 7
+        }
+      ],
+      "labor_hours": 0.475,
+      "menu_price_rmb": 42.0,
+      "cost_rmb": 47.28,
+      "cost_model": {
+        "scenario": "full-chain-screening-v1",
+        "currency": "CNY",
+        "total_rmb": 47.28,
+        "lines": [
+          {
+            "id": "raw-materials",
+            "label": "原料采购与初级产品",
+            "amount": 6.75,
+            "basis": "各原料 kg × 原料采购价"
+          },
+          {
+            "id": "farm-inputs",
+            "label": "农场 / 饲料 / 灌溉投入",
+            "amount": 6.07,
+            "basis": "原料采购价 × 90% 上游投入情景"
+          },
+          {
+            "id": "processing",
+            "label": "中央厨房 / 加工",
+            "amount": 5.54,
+            "basis": "原料价 × 45% + 每份加工固定投入"
+          },
+          {
+            "id": "cold-chain",
+            "label": "仓储 / 冷链",
+            "amount": 1.01,
+            "basis": "运输质量 kg × ¥1.40"
+          },
+          {
+            "id": "transport",
+            "label": "干线运输",
+            "amount": 2.04,
+            "basis": "t·km × ¥6.50 + 车辆调度分摊"
+          },
+          {
+            "id": "store-facility",
+            "label": "门店装修 / 灶台设备折旧",
+            "amount": 12.0,
+            "basis": "农场、加工线、门店设备与装修的订单分摊"
+          },
+          {
+            "id": "utilities",
+            "label": "煤气 / 电力 / 用水",
+            "amount": 1.16,
+            "basis": "门店 kWh × ¥2.30 + 燃气与用水情景"
+          },
+          {
+            "id": "store-labor",
+            "label": "门店收货 / 收银 / 制作 / 包装人工",
+            "amount": 4.53,
+            "basis": "门店 person-minutes × ¥32/h"
+          },
+          {
+            "id": "packaging",
+            "label": "外包装纸 / 印刷",
+            "amount": 2.6,
+            "basis": "包装 kg × ¥32 + 印刷与耗材"
+          },
+          {
+            "id": "delivery",
+            "label": "司机 / 末端配送",
+            "amount": 5.58,
+            "basis": "配送 person-minutes × ¥35/h + 车辆末端分摊"
+          }
+        ],
+        "note": "非麦当劳财务数据；MCP 未提供供应商发票、工资、租金或折旧，金额为可替换的项目情景。"
+      }
+    },
+    {
+      "id": "mcp-9900005453",
+      "name": "麦香鸡套餐",
+      "tier": "单人餐",
+      "protein": "鸡肉",
+      "description": "MCP 默认搭配：麦香鸡 / 中薯条 / 可乐中杯",
+      "mcp_code": "9900005453",
+      "source": "MCP live menu · store 1951020 · 2026-10-25T08:40:21.128922+00:00",
+      "tags": [
+        "MCP实时",
+        "鸡肉",
+        "单人餐"
+      ],
+      "components": [
+        {
+          "name": "蛋白质主料",
+          "quantity_kg": 0.105,
+          "factor_id": "chicken",
+          "display": "蛋白质主料"
+        },
+        {
+          "name": "面包胚",
+          "quantity_kg": 0.075,
+          "factor_id": "bun",
+          "display": "面包胚"
+        },
+        {
+          "name": "奶酪/蔬菜/酱料估算",
+          "quantity_kg": 0.042,
+          "factor_id": "sauce",
+          "display": "蔬菜与酱料"
+        },
+        {
+          "name": "薯条马铃薯",
+          "quantity_kg": 0.13,
+          "factor_id": "potato",
+          "display": "默认薯条"
+        },
+        {
+          "name": "饮料",
+          "quantity_kg": 0.3,
+          "factor_id": "cola",
+          "display": "默认饮料"
+        }
+      ],
+      "transport_mass_kg": 0.72,
+      "transport_distance_km": 180,
+      "packaging_kg": 0.05,
+      "store_kwh": 0.18,
+      "labor_scenario": "delivery-default",
+      "labor_chain": [
+        {
+          "id": "farm",
+          "label": "养殖 / 种植分摊",
+          "minutes": 4
+        },
+        {
+          "id": "central-kitchen",
+          "label": "中央厨房与加工",
+          "minutes": 7
+        },
+        {
+          "id": "logistics",
+          "label": "仓储与干线运输",
+          "minutes": 2
+        },
+        {
+          "id": "store-receiving",
+          "label": "门店收货",
+          "minutes": 1.5
+        },
+        {
+          "id": "cashier",
+          "label": "收银与接单",
+          "minutes": 1
+        },
+        {
+          "id": "cooking",
+          "label": "汉堡与薯条制作",
+          "minutes": 4
+        },
+        {
+          "id": "packing",
+          "label": "组装与包装",
+          "minutes": 2
+        },
+        {
+          "id": "delivery",
+          "label": "司机与末端配送",
+          "minutes": 7
+        }
+      ],
+      "labor_hours": 0.475,
+      "menu_price_rmb": 33.0,
+      "cost_rmb": 42.83,
+      "cost_model": {
+        "scenario": "full-chain-screening-v1",
+        "currency": "CNY",
+        "total_rmb": 42.83,
+        "lines": [
+          {
+            "id": "raw-materials",
+            "label": "原料采购与初级产品",
+            "amount": 4.86,
+            "basis": "各原料 kg × 原料采购价"
+          },
+          {
+            "id": "farm-inputs",
+            "label": "农场 / 饲料 / 灌溉投入",
+            "amount": 4.37,
+            "basis": "原料采购价 × 90% 上游投入情景"
+          },
+          {
+            "id": "processing",
+            "label": "中央厨房 / 加工",
+            "amount": 4.68,
+            "basis": "原料价 × 45% + 每份加工固定投入"
+          },
+          {
+            "id": "cold-chain",
+            "label": "仓储 / 冷链",
+            "amount": 1.01,
+            "basis": "运输质量 kg × ¥1.40"
+          },
+          {
+            "id": "transport",
+            "label": "干线运输",
+            "amount": 2.04,
+            "basis": "t·km × ¥6.50 + 车辆调度分摊"
+          },
+          {
+            "id": "store-facility",
+            "label": "门店装修 / 灶台设备折旧",
+            "amount": 12.0,
+            "basis": "农场、加工线、门店设备与装修的订单分摊"
+          },
+          {
+            "id": "utilities",
+            "label": "煤气 / 电力 / 用水",
+            "amount": 1.16,
+            "basis": "门店 kWh × ¥2.30 + 燃气与用水情景"
+          },
+          {
+            "id": "store-labor",
+            "label": "门店收货 / 收银 / 制作 / 包装人工",
+            "amount": 4.53,
+            "basis": "门店 person-minutes × ¥32/h"
+          },
+          {
+            "id": "packaging",
+            "label": "外包装纸 / 印刷",
+            "amount": 2.6,
+            "basis": "包装 kg × ¥32 + 印刷与耗材"
+          },
+          {
+            "id": "delivery",
+            "label": "司机 / 末端配送",
+            "amount": 5.58,
+            "basis": "配送 person-minutes × ¥35/h + 车辆末端分摊"
+          }
+        ],
+        "note": "非麦当劳财务数据；MCP 未提供供应商发票、工资、租金或折旧，金额为可替换的项目情景。"
+      }
+    },
+    {
+      "id": "mcp-9900005428",
+      "name": "培根安格斯厚牛堡三件套",
+      "tier": "三件套",
+      "protein": "牛肉",
+      "description": "MCP 默认搭配：培根安格斯厚牛堡 / 中薯条 / 可乐中杯",
+      "mcp_code": "9900005428",
+      "source": "MCP live menu · store 1951020 · 2026-10-25T08:40:21.128922+00:00",
+      "tags": [
+        "MCP实时",
+        "牛肉",
+        "三件套"
+      ],
+      "components": [
+        {
+          "name": "蛋白质主料",
+          "quantity_kg": 0.105,
+          "factor_id": "beef",
+          "display": "蛋白质主料"
+        },
+        {
+          "name": "面包胚",
+          "quantity_kg": 0.075,
+          "factor_id": "bun",
+          "display": "面包胚"
+        },
+        {
+          "name": "奶酪/蔬菜/酱料估算",
+          "quantity_kg": 0.042,
+          "factor_id": "sauce",
+          "display": "蔬菜与酱料"
+        },
+        {
+          "name": "薯条马铃薯",
+          "quantity_kg": 0.13,
+          "factor_id": "potato",
+          "display": "默认薯条"
+        },
+        {
+          "name": "饮料",
+          "quantity_kg": 0.3,
+          "factor_id": "cola",
+          "display": "默认饮料"
+        }
+      ],
+      "transport_mass_kg": 0.72,
+      "transport_distance_km": 180,
+      "packaging_kg": 0.05,
+      "store_kwh": 0.18,
+      "labor_scenario": "delivery-default",
+      "labor_chain": [
+        {
+          "id": "farm",
+          "label": "养殖 / 种植分摊",
+          "minutes": 4
+        },
+        {
+          "id": "central-kitchen",
+          "label": "中央厨房与加工",
+          "minutes": 7
+        },
+        {
+          "id": "logistics",
+          "label": "仓储与干线运输",
+          "minutes": 2
+        },
+        {
+          "id": "store-receiving",
+          "label": "门店收货",
+          "minutes": 1.5
+        },
+        {
+          "id": "cashier",
+          "label": "收银与接单",
+          "minutes": 1
+        },
+        {
+          "id": "cooking",
+          "label": "汉堡与薯条制作",
+          "minutes": 4
+        },
+        {
+          "id": "packing",
+          "label": "组装与包装",
+          "minutes": 2
+        },
+        {
+          "id": "delivery",
+          "label": "司机与末端配送",
+          "minutes": 7
+        }
+      ],
+      "labor_hours": 0.475,
+      "menu_price_rmb": 50.5,
+      "cost_rmb": 47.28,
+      "cost_model": {
+        "scenario": "full-chain-screening-v1",
+        "currency": "CNY",
+        "total_rmb": 47.28,
+        "lines": [
+          {
+            "id": "raw-materials",
+            "label": "原料采购与初级产品",
+            "amount": 6.75,
+            "basis": "各原料 kg × 原料采购价"
+          },
+          {
+            "id": "farm-inputs",
+            "label": "农场 / 饲料 / 灌溉投入",
+            "amount": 6.07,
+            "basis": "原料采购价 × 90% 上游投入情景"
+          },
+          {
+            "id": "processing",
+            "label": "中央厨房 / 加工",
+            "amount": 5.54,
+            "basis": "原料价 × 45% + 每份加工固定投入"
+          },
+          {
+            "id": "cold-chain",
+            "label": "仓储 / 冷链",
+            "amount": 1.01,
+            "basis": "运输质量 kg × ¥1.40"
+          },
+          {
+            "id": "transport",
+            "label": "干线运输",
+            "amount": 2.04,
+            "basis": "t·km × ¥6.50 + 车辆调度分摊"
+          },
+          {
+            "id": "store-facility",
+            "label": "门店装修 / 灶台设备折旧",
+            "amount": 12.0,
+            "basis": "农场、加工线、门店设备与装修的订单分摊"
+          },
+          {
+            "id": "utilities",
+            "label": "煤气 / 电力 / 用水",
+            "amount": 1.16,
+            "basis": "门店 kWh × ¥2.30 + 燃气与用水情景"
+          },
+          {
+            "id": "store-labor",
+            "label": "门店收货 / 收银 / 制作 / 包装人工",
+            "amount": 4.53,
+            "basis": "门店 person-minutes × ¥32/h"
+          },
+          {
+            "id": "packaging",
+            "label": "外包装纸 / 印刷",
+            "amount": 2.6,
+            "basis": "包装 kg × ¥32 + 印刷与耗材"
+          },
+          {
+            "id": "delivery",
+            "label": "司机 / 末端配送",
+            "amount": 5.58,
+            "basis": "配送 person-minutes × ¥35/h + 车辆末端分摊"
+          }
+        ],
+        "note": "非麦当劳财务数据；MCP 未提供供应商发票、工资、租金或折旧，金额为可替换的项目情景。"
+      }
+    }
+  ]
+}

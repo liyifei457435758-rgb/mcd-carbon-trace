@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="McCarbon Trace：用麦当劳 MCP 餐品结构和公开筛选因子解释一份餐背后的环境影响。">
+  <title>McCarbon Trace · 麦碳账本</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="importmap">
+    {"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"}}
+  </script>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="masthead shell">
+    <a class="brand" href="#top" aria-label="McCarbon Trace 首页"><span class="brand-mark">M</span><span>McCarbon<br><em>Trace</em></span></a>
+    <div class="top-note"><span class="pulse"></span><span id="data-status">离线示例数据 · 可替换为 MCP 实时菜单</span></div>
+  </header>
+
+  <main id="top">
+    <section class="hero shell">
+      <div class="hero-copy">
+        <p class="eyebrow">MCD · MCP · SCREENING LCA / 01</p>
+        <h1>一份套餐，<br><span>背后是一整条供应链。</span></h1>
+        <p class="lede">从一块牛肉、一颗土豆，到包装、冷链和门店电力。选择一份餐，看看它留下的不是价格，而是一张可以被解释的环境账本。</p>
+        <a class="scroll-cue" href="#choose"><span>↓</span> 选择一份餐</a>
+      </div>
+      <div class="hero-stamp" aria-label="这是筛选级估算，不是供应商审计">
+        <div class="stamp-ring"><span>EST.</span><strong>∞</strong><small>TRACE<br>THE<br>MEAL</small></div>
+        <p>筛选级估算<br>不代表官方供应链数据</p>
+      </div>
+    </section>
+
+    <section id="choose" class="choose shell section-rule">
+      <div class="section-heading"><p class="eyebrow">SELECT YOUR ORDER / 02</p><h2>今天吃哪一条链？</h2><p>六个示例套餐按分量和蛋白质分组。实时菜单接入后，卡片会带上 MCP 餐品编码。</p></div>
+      <div id="meal-list" class="meal-list" role="list" aria-label="可选择的套餐"></div>
+    </section>
+
+    <section class="dashboard shell section-rule">
+      <div class="dashboard-head"><div><p class="eyebrow">THE HIDDEN LEDGER / 03</p><h2 id="meal-title">选择套餐开始</h2><p id="meal-description" class="muted">每个数字都带有单位、区间和来源。</p></div><div class="source-chip" id="source-chip">OFFLINE FIXTURE</div></div>
+      <div class="carbon-hero">
+        <div class="carbon-main"><span class="metric-label">估算碳足迹 · kgCO₂e</span><strong id="carbon-p50">—</strong><span id="carbon-range" class="range">p10 — · p90 —</span></div>
+        <div class="carbon-visual" aria-hidden="true"><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="orbit-dot"></div><span>GWP100<br>screening</span></div>
+      </div>
+      <div id="metrics" class="metrics-grid"></div>
+      <div class="lower-grid">
+        <article class="panel breakdown-panel"><div class="panel-title"><span>TRACE / 04</span><h3>碳从哪里来</h3></div><div id="breakdown" class="breakdown"></div></article>
+        <article class="panel evidence-panel"><div class="panel-title"><span>EVIDENCE / 05</span><h3>这不是一个黑箱</h3></div><p class="panel-copy">牛的光合吸收没有被当成抵扣；只有有边界、有来源的永久固碳才可以减掉。每个因子都保留了来源、地区和不确定性。</p><div id="provenance" class="provenance"></div></article>
+      </div>
+    </section>
+
+    <section id="physicalize" class="analogues shell section-rule" data-reveal>
+      <div class="section-heading physical-heading">
+        <p class="eyebrow">MAKE IT FELT / 06</p>
+        <h2>把抽象数字，装配成一张看得懂的账。</h2>
+        <p>每一个单位都是一个可数物件。套餐切换时，物件逐件落下，读数跟着已经落地的数量变化。</p>
+      </div>
+      <div class="physical-toolbar">
+        <div class="physical-legend" aria-label="数据物理化图例">
+          <span class="legend-label">DATA PHYSICAL / 数据物理化</span>
+          <span><i class="legend-swatch acrylic"></i>1浴缸 = 100 L</span>
+          <span><i class="legend-swatch wood"></i>400m跑道 ≈ 7,200 m²</span>
+          <span><i class="legend-swatch brass"></i>Σ阶段分钟 = 人力</span>
+          <span><i class="legend-swatch paper"></i>1捆 = 10×¥100</span>
+        </div>
+        <div class="physical-actions">
+          <span id="assembly-status" class="assembly-status" role="status">等待装配</span>
+          <button class="pullback-button" id="pullback-button" type="button" aria-pressed="false">展开装置 <span>↗</span></button>
+        </div>
+      </div>
+      <div class="physical-pullback-stage" id="physical-pullback-stage" aria-hidden="true">
+        <div class="pullback-copy"><span class="eyebrow">STUDIO PULL-BACK / 装置总览</span><h3>四种材料，拼成这一餐的隐形账本。</h3><p>读数不是一根被拉长的条形图，而是由片、块、枚、叠逐件组成。每个物件都绑定同一套餐的当前 p50 结果。</p></div>
+        <div class="assembly-object-grid" id="assembly-object-grid" aria-label="四种数据物件总览"></div>
+        <div class="pullback-verdict"><span id="assembly-verdict">选择“回到读数”重新播放装配。</span><span class="pullback-line"></span></div>
+      </div>
+      <div class="analogue-grid physical-grid" id="physical-grid">
+        <article class="analogue physical-card water-card spotlight-card" data-physical="acrylic" data-reveal>
+          <div class="analogue-top"><span class="analogue-index">A</span><div><span class="metric-label">WATER / 用水</span><h3 id="water-title">—</h3></div></div>
+          <div class="physical-stage water-stage"><canvas id="water-canvas" aria-hidden="true"></canvas><div class="stage-base acrylic-base"><div class="water-pieces" id="water-pieces" aria-label="按 100 升一个浴缸的水量物件"></div></div><span class="stage-tag">1 个浴缸 = 100 L</span></div>
+          <div class="physical-reading"><strong id="water-reading">—</strong><span> L · 家庭日用水 <b id="water-households">—</b> 天</span></div>
+          <p class="source-note">来源：公开食品 LCA 筛选因子；水足迹包含原料与包装估算。</p>
+        </article>
+        <article class="analogue physical-card land-card spotlight-card" data-physical="wood" data-reveal>
+          <div class="analogue-top"><span class="analogue-index">B</span><div><span class="metric-label">LAND / 土地</span><h3 id="land-title">—</h3></div></div>
+          <div class="physical-stage land-stage"><canvas id="land-canvas" aria-hidden="true"></canvas><div class="land-square" id="land-square"><span>400 m 标准跑道<br><small>≈ 7,200 m²（项目参照）</small></span></div><div class="land-pieces" id="land-pieces" aria-label="按 0.5 平方米一年一块的土地物件"></div><div class="land-dot" id="land-dot"></div><span class="stage-tag">1 圈 = 7,200 m²</span></div>
+          <div class="physical-reading"><strong id="land-reading">—</strong><span> m²·yr · 年度占用</span></div>
+          <p class="source-note">参照底座：400 m 标准跑道约 7,200 m²；红色标记为放大后的估算占用。</p>
+        </article>
+        <article class="analogue physical-card people-card spotlight-card" data-physical="brass" data-reveal>
+          <div class="analogue-top"><span class="analogue-index">C</span><div><span class="metric-label">LABOR / 人力</span><h3 id="labor-title">—</h3></div></div>
+          <div class="physical-stage labor-stage"><canvas id="labor-canvas" aria-hidden="true"></canvas><div id="people-grid" class="people-grid" aria-label="按全链路投入工时的人力物件"></div><div class="labor-base"></div><span class="stage-tag">Σ 各环节 person-minutes</span></div>
+          <div class="physical-reading"><strong id="labor-reading">—</strong><span> 小时 · 全链路累计投入</span></div>
+          <div class="labor-chain" id="labor-chain" aria-label="全链路人力分解"></div>
+          <p class="source-note">包含养殖/种植、中央厨房、仓储干线、门店、制作包装和末端配送；这是项目情景的人力投入，不是单个员工连续工作时钟。</p>
+        </article>
+        <article class="analogue physical-card money-card spotlight-card" data-physical="paper" data-reveal>
+          <div class="analogue-top"><span class="analogue-index">D</span><div><span class="metric-label">COST / 资金</span><h3 id="money-title">—</h3></div></div>
+          <div class="physical-stage money-stage"><canvas id="money-canvas" aria-hidden="true"></canvas><div class="money-stack" id="money-stack" aria-label="按 100 元一张、10 张一捆的资金物件"></div><span class="stage-tag">1 捆 = 10 张百元钞票</span></div>
+          <div class="physical-reading"><strong id="money-reading">—</strong><span> · 约 <b id="money-burgers">—</b> 捆百元钞票</span></div>
+          <div class="cost-chain" id="cost-chain" aria-label="全链路资金成本分项"></div>
+          <p class="source-note">资金是从农场到送达的成本情景，不是售价；MCP 未提供供应商发票、工资、租金或折旧，金额可替换。</p>
+        </article>
+      </div>
+    </section>
+
+    <dialog class="metric-dialog" id="metric-dialog" aria-labelledby="metric-dialog-title">
+      <div class="metric-dialog-inner">
+        <button class="dialog-close" id="metric-dialog-close" type="button" aria-label="关闭算法说明">×</button>
+        <span class="eyebrow" id="metric-dialog-kicker">METHOD / 算法</span>
+        <h2 id="metric-dialog-title">指标算法</h2>
+        <p class="dialog-lede" id="metric-dialog-lede"></p>
+        <div class="formula-plate"><span class="formula-label">数学模型</span><code id="metric-dialog-formula"></code></div>
+        <div class="dialog-columns"><div><span class="formula-label">单位换算</span><p id="metric-dialog-unit"></p></div><div><span class="formula-label">当前结果</span><p id="metric-dialog-result"></p></div></div>
+        <p class="dialog-source" id="metric-dialog-source"></p>
+      </div>
+    </dialog>
+  </main>
+  <footer class="shell footer"><div class="footer-brand">McCarbon Trace <span>麦碳账本</span></div><p>Built for the McDonald’s Developer Innovation Challenge · screening estimate · sources stay visible</p><p class="footer-note">本页面为独立参赛作品，不代表麦当劳官方立场；MCP 数据与公开因子均需按其许可和条款使用。</p></footer>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
+

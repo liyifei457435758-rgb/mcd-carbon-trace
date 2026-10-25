@@ -1,0 +1,15 @@
+{
+  "metadata": {
+    "status": "development estimate",
+    "rule": "replace ingredient weights with MCP detail or supplier data when available",
+    "warning": "No mapping in this file is an official McDonald's recipe disclosure."
+  },
+  "mappings": {
+    "fixture-solo-beef": {"source": "fixture", "confidence": "estimated", "ingredients": {"beef": 0.1, "bun": 0.075, "cheese": 0.018, "lettuce": 0.012, "sauce": 0.012, "potato": 0.13, "cola": 0.3}},
+    "fixture-solo-chicken": {"source": "fixture", "confidence": "estimated", "ingredients": {"chicken": 0.105, "chicken_patty": 0.105, "bun": 0.075, "lettuce": 0.012, "sauce": 0.012, "potato": 0.13, "cola": 0.3}},
+    "fixture-duo-beef": {"source": "fixture", "confidence": "estimated", "ingredients": {"beef": 0.2, "bun": 0.15, "cheese": 0.036, "lettuce": 0.024, "sauce": 0.024, "potato": 0.26, "cola": 0.6}},
+    "fixture-duo-chicken": {"source": "fixture", "confidence": "estimated", "ingredients": {"chicken": 0.21, "chicken_patty": 0.21, "bun": 0.15, "lettuce": 0.024, "sauce": 0.024, "potato": 0.26, "cola": 0.6}},
+    "fixture-beef-xl": {"source": "fixture", "confidence": "estimated", "ingredients": {"beef": 0.16, "bun": 0.085, "cheese": 0.024, "lettuce": 0.015, "sauce": 0.016, "potato": 0.19, "cola": 0.45}},
+    "fixture-chicken-xl": {"source": "fixture", "confidence": "estimated", "ingredients": {"chicken": 0.17, "chicken_patty": 0.17, "bun": 0.085, "lettuce": 0.015, "sauce": 0.016, "potato": 0.19, "cola": 0.45}}
+  }
+}

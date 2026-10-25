@@ -1,0 +1,645 @@
+{
+  "metadata": {
+    "source": "offline fixture for development; replace with MCP query-meals/query-meal-detail output",
+    "captured_at": "2026-10-25",
+    "warning": "These are illustrative mappings, not official McDonald's recipe disclosures."
+  },
+  "meals": [
+    {
+      "id": "solo-beef",
+      "name": "单人牛肉堡餐（示例）",
+      "tier": "单人餐",
+      "protein": "牛肉",
+      "description": "一份牛肉堡、薯条与饮料的单人组合",
+      "mcp_code": "fixture-solo-beef",
+      "tags": [
+        "牛肉",
+        "单人",
+        "对比基线"
+      ],
+      "components": [
+        {
+          "name": "牛肉饼",
+          "quantity_kg": 0.1,
+          "factor_id": "beef",
+          "display": "牛肉饼"
+        },
+        {
+          "name": "面包胚",
+          "quantity_kg": 0.075,
+          "factor_id": "bun",
+          "display": "面包胚"
+        },
+        {
+          "name": "奶酪",
+          "quantity_kg": 0.018,
+          "factor_id": "cheese",
+          "display": "奶酪"
+        },
+        {
+          "name": "生菜",
+          "quantity_kg": 0.012,
+          "factor_id": "lettuce",
+          "display": "生菜"
+        },
+        {
+          "name": "酱料",
+          "quantity_kg": 0.012,
+          "factor_id": "sauce",
+          "display": "酱料"
+        },
+        {
+          "name": "薯条马铃薯",
+          "quantity_kg": 0.13,
+          "factor_id": "potato",
+          "display": "薯条"
+        },
+        {
+          "name": "饮料",
+          "quantity_kg": 0.3,
+          "factor_id": "cola",
+          "display": "饮料"
+        }
+      ],
+      "transport_mass_kg": 0.7,
+      "transport_distance_km": 180,
+      "packaging_kg": 0.045,
+      "store_kwh": 0.18,
+      "labor_hours": 0.475,
+      "cost_rmb": 35,
+      "labor_scenario": "delivery-default",
+      "labor_chain": [
+        {
+          "id": "farm",
+          "label": "养殖 / 种植分摊",
+          "minutes": 4
+        },
+        {
+          "id": "central-kitchen",
+          "label": "中央厨房与加工",
+          "minutes": 7
+        },
+        {
+          "id": "logistics",
+          "label": "仓储与干线运输",
+          "minutes": 2
+        },
+        {
+          "id": "store-receiving",
+          "label": "门店收货",
+          "minutes": 1.5
+        },
+        {
+          "id": "cashier",
+          "label": "收银与接单",
+          "minutes": 1
+        },
+        {
+          "id": "cooking",
+          "label": "汉堡与薯条制作",
+          "minutes": 4
+        },
+        {
+          "id": "packing",
+          "label": "组装与包装",
+          "minutes": 2
+        },
+        {
+          "id": "delivery",
+          "label": "司机与末端配送",
+          "minutes": 7
+        }
+      ]
+    },
+    {
+      "id": "solo-chicken",
+      "name": "单人鸡肉堡餐（示例）",
+      "tier": "单人餐",
+      "protein": "鸡肉",
+      "description": "一份鸡肉堡、薯条与饮料的单人组合",
+      "mcp_code": "fixture-solo-chicken",
+      "tags": [
+        "鸡肉",
+        "单人",
+        "低碳对比"
+      ],
+      "components": [
+        {
+          "name": "鸡肉饼",
+          "quantity_kg": 0.105,
+          "factor_id": "chicken",
+          "display": "鸡肉饼"
+        },
+        {
+          "name": "鸡肉加工",
+          "quantity_kg": 0.105,
+          "factor_id": "chicken_patty",
+          "display": "鸡肉加工"
+        },
+        {
+          "name": "面包胚",
+          "quantity_kg": 0.075,
+          "factor_id": "bun",
+          "display": "面包胚"
+        },
+        {
+          "name": "生菜",
+          "quantity_kg": 0.012,
+          "factor_id": "lettuce",
+          "display": "生菜"
+        },
+        {
+          "name": "酱料",
+          "quantity_kg": 0.012,
+          "factor_id": "sauce",
+          "display": "酱料"
+        },
+        {
+          "name": "薯条马铃薯",
+          "quantity_kg": 0.13,
+          "factor_id": "potato",
+          "display": "薯条"
+        },
+        {
+          "name": "饮料",
+          "quantity_kg": 0.3,
+          "factor_id": "cola",
+          "display": "饮料"
+        }
+      ],
+      "transport_mass_kg": 0.7,
+      "transport_distance_km": 180,
+      "packaging_kg": 0.045,
+      "store_kwh": 0.18,
+      "labor_hours": 0.475,
+      "cost_rmb": 33,
+      "labor_scenario": "delivery-default",
+      "labor_chain": [
+        {
+          "id": "farm",
+          "label": "养殖 / 种植分摊",
+          "minutes": 4
+        },
+        {
+          "id": "central-kitchen",
+          "label": "中央厨房与加工",
+          "minutes": 7
+        },
+        {
+          "id": "logistics",
+          "label": "仓储与干线运输",
+          "minutes": 2
+        },
+        {
+          "id": "store-receiving",
+          "label": "门店收货",
+          "minutes": 1.5
+        },
+        {
+          "id": "cashier",
+          "label": "收银与接单",
+          "minutes": 1
+        },
+        {
+          "id": "cooking",
+          "label": "汉堡与薯条制作",
+          "minutes": 4
+        },
+        {
+          "id": "packing",
+          "label": "组装与包装",
+          "minutes": 2
+        },
+        {
+          "id": "delivery",
+          "label": "司机与末端配送",
+          "minutes": 7
+        }
+      ]
+    },
+    {
+      "id": "duo-beef",
+      "name": "双人牛肉分享餐（示例）",
+      "tier": "双人餐",
+      "protein": "牛肉",
+      "description": "两份牛肉堡、双份薯条与饮料的分享组合",
+      "mcp_code": "fixture-duo-beef",
+      "tags": [
+        "牛肉",
+        "双人",
+        "高分量"
+      ],
+      "components": [
+        {
+          "name": "牛肉饼",
+          "quantity_kg": 0.2,
+          "factor_id": "beef",
+          "display": "牛肉饼"
+        },
+        {
+          "name": "面包胚",
+          "quantity_kg": 0.15,
+          "factor_id": "bun",
+          "display": "面包胚"
+        },
+        {
+          "name": "奶酪",
+          "quantity_kg": 0.036,
+          "factor_id": "cheese",
+          "display": "奶酪"
+        },
+        {
+          "name": "生菜",
+          "quantity_kg": 0.024,
+          "factor_id": "lettuce",
+          "display": "生菜"
+        },
+        {
+          "name": "酱料",
+          "quantity_kg": 0.024,
+          "factor_id": "sauce",
+          "display": "酱料"
+        },
+        {
+          "name": "薯条马铃薯",
+          "quantity_kg": 0.26,
+          "factor_id": "potato",
+          "display": "薯条"
+        },
+        {
+          "name": "饮料",
+          "quantity_kg": 0.6,
+          "factor_id": "cola",
+          "display": "饮料"
+        }
+      ],
+      "transport_mass_kg": 1.35,
+      "transport_distance_km": 180,
+      "packaging_kg": 0.085,
+      "store_kwh": 0.32,
+      "labor_hours": 0.742,
+      "cost_rmb": 68,
+      "labor_scenario": "delivery-default",
+      "labor_chain": [
+        {
+          "id": "farm",
+          "label": "养殖 / 种植分摊",
+          "minutes": 8
+        },
+        {
+          "id": "central-kitchen",
+          "label": "中央厨房与加工",
+          "minutes": 12
+        },
+        {
+          "id": "logistics",
+          "label": "仓储与干线运输",
+          "minutes": 3
+        },
+        {
+          "id": "store-receiving",
+          "label": "门店收货",
+          "minutes": 2
+        },
+        {
+          "id": "cashier",
+          "label": "收银与接单",
+          "minutes": 1.5
+        },
+        {
+          "id": "cooking",
+          "label": "汉堡与薯条制作",
+          "minutes": 7
+        },
+        {
+          "id": "packing",
+          "label": "组装与包装",
+          "minutes": 3
+        },
+        {
+          "id": "delivery",
+          "label": "司机与末端配送",
+          "minutes": 8
+        }
+      ]
+    },
+    {
+      "id": "duo-chicken",
+      "name": "双人鸡肉分享餐（示例）",
+      "tier": "双人餐",
+      "protein": "鸡肉",
+      "description": "两份鸡肉堡、双份薯条与饮料的分享组合",
+      "mcp_code": "fixture-duo-chicken",
+      "tags": [
+        "鸡肉",
+        "双人",
+        "高分量"
+      ],
+      "components": [
+        {
+          "name": "鸡肉饼",
+          "quantity_kg": 0.21,
+          "factor_id": "chicken",
+          "display": "鸡肉饼"
+        },
+        {
+          "name": "鸡肉加工",
+          "quantity_kg": 0.21,
+          "factor_id": "chicken_patty",
+          "display": "鸡肉加工"
+        },
+        {
+          "name": "面包胚",
+          "quantity_kg": 0.15,
+          "factor_id": "bun",
+          "display": "面包胚"
+        },
+        {
+          "name": "生菜",
+          "quantity_kg": 0.024,
+          "factor_id": "lettuce",
+          "display": "生菜"
+        },
+        {
+          "name": "酱料",
+          "quantity_kg": 0.024,
+          "factor_id": "sauce",
+          "display": "酱料"
+        },
+        {
+          "name": "薯条马铃薯",
+          "quantity_kg": 0.26,
+          "factor_id": "potato",
+          "display": "薯条"
+        },
+        {
+          "name": "饮料",
+          "quantity_kg": 0.6,
+          "factor_id": "cola",
+          "display": "饮料"
+        }
+      ],
+      "transport_mass_kg": 1.35,
+      "transport_distance_km": 180,
+      "packaging_kg": 0.085,
+      "store_kwh": 0.32,
+      "labor_hours": 0.742,
+      "cost_rmb": 64,
+      "labor_scenario": "delivery-default",
+      "labor_chain": [
+        {
+          "id": "farm",
+          "label": "养殖 / 种植分摊",
+          "minutes": 8
+        },
+        {
+          "id": "central-kitchen",
+          "label": "中央厨房与加工",
+          "minutes": 12
+        },
+        {
+          "id": "logistics",
+          "label": "仓储与干线运输",
+          "minutes": 3
+        },
+        {
+          "id": "store-receiving",
+          "label": "门店收货",
+          "minutes": 2
+        },
+        {
+          "id": "cashier",
+          "label": "收银与接单",
+          "minutes": 1.5
+        },
+        {
+          "id": "cooking",
+          "label": "汉堡与薯条制作",
+          "minutes": 7
+        },
+        {
+          "id": "packing",
+          "label": "组装与包装",
+          "minutes": 3
+        },
+        {
+          "id": "delivery",
+          "label": "司机与末端配送",
+          "minutes": 8
+        }
+      ]
+    },
+    {
+      "id": "beef-xl",
+      "name": "加大牛肉能量餐（示例）",
+      "tier": "加大餐",
+      "protein": "牛肉",
+      "description": "更高分量牛肉、薯条与饮料组合",
+      "mcp_code": "fixture-beef-xl",
+      "tags": [
+        "牛肉",
+        "加大",
+        "高碳峰值"
+      ],
+      "components": [
+        {
+          "name": "牛肉饼",
+          "quantity_kg": 0.16,
+          "factor_id": "beef",
+          "display": "牛肉饼"
+        },
+        {
+          "name": "面包胚",
+          "quantity_kg": 0.085,
+          "factor_id": "bun",
+          "display": "面包胚"
+        },
+        {
+          "name": "奶酪",
+          "quantity_kg": 0.024,
+          "factor_id": "cheese",
+          "display": "奶酪"
+        },
+        {
+          "name": "生菜",
+          "quantity_kg": 0.015,
+          "factor_id": "lettuce",
+          "display": "生菜"
+        },
+        {
+          "name": "酱料",
+          "quantity_kg": 0.016,
+          "factor_id": "sauce",
+          "display": "酱料"
+        },
+        {
+          "name": "薯条马铃薯",
+          "quantity_kg": 0.19,
+          "factor_id": "potato",
+          "display": "薯条"
+        },
+        {
+          "name": "饮料",
+          "quantity_kg": 0.45,
+          "factor_id": "cola",
+          "display": "饮料"
+        }
+      ],
+      "transport_mass_kg": 0.95,
+      "transport_distance_km": 180,
+      "packaging_kg": 0.06,
+      "store_kwh": 0.24,
+      "labor_hours": 0.475,
+      "cost_rmb": 48,
+      "labor_scenario": "delivery-default",
+      "labor_chain": [
+        {
+          "id": "farm",
+          "label": "养殖 / 种植分摊",
+          "minutes": 4
+        },
+        {
+          "id": "central-kitchen",
+          "label": "中央厨房与加工",
+          "minutes": 7
+        },
+        {
+          "id": "logistics",
+          "label": "仓储与干线运输",
+          "minutes": 2
+        },
+        {
+          "id": "store-receiving",
+          "label": "门店收货",
+          "minutes": 1.5
+        },
+        {
+          "id": "cashier",
+          "label": "收银与接单",
+          "minutes": 1
+        },
+        {
+          "id": "cooking",
+          "label": "汉堡与薯条制作",
+          "minutes": 4
+        },
+        {
+          "id": "packing",
+          "label": "组装与包装",
+          "minutes": 2
+        },
+        {
+          "id": "delivery",
+          "label": "司机与末端配送",
+          "minutes": 7
+        }
+      ]
+    },
+    {
+      "id": "chicken-xl",
+      "name": "加大鸡肉能量餐（示例）",
+      "tier": "加大餐",
+      "protein": "鸡肉",
+      "description": "更高分量鸡肉、薯条与饮料组合",
+      "mcp_code": "fixture-chicken-xl",
+      "tags": [
+        "鸡肉",
+        "加大",
+        "物种对比"
+      ],
+      "components": [
+        {
+          "name": "鸡肉饼",
+          "quantity_kg": 0.17,
+          "factor_id": "chicken",
+          "display": "鸡肉饼"
+        },
+        {
+          "name": "鸡肉加工",
+          "quantity_kg": 0.17,
+          "factor_id": "chicken_patty",
+          "display": "鸡肉加工"
+        },
+        {
+          "name": "面包胚",
+          "quantity_kg": 0.085,
+          "factor_id": "bun",
+          "display": "面包胚"
+        },
+        {
+          "name": "生菜",
+          "quantity_kg": 0.015,
+          "factor_id": "lettuce",
+          "display": "生菜"
+        },
+        {
+          "name": "酱料",
+          "quantity_kg": 0.016,
+          "factor_id": "sauce",
+          "display": "酱料"
+        },
+        {
+          "name": "薯条马铃薯",
+          "quantity_kg": 0.19,
+          "factor_id": "potato",
+          "display": "薯条"
+        },
+        {
+          "name": "饮料",
+          "quantity_kg": 0.45,
+          "factor_id": "cola",
+          "display": "饮料"
+        }
+      ],
+      "transport_mass_kg": 0.95,
+      "transport_distance_km": 180,
+      "packaging_kg": 0.06,
+      "store_kwh": 0.24,
+      "labor_hours": 0.475,
+      "cost_rmb": 45,
+      "labor_scenario": "delivery-default",
+      "labor_chain": [
+        {
+          "id": "farm",
+          "label": "养殖 / 种植分摊",
+          "minutes": 4
+        },
+        {
+          "id": "central-kitchen",
+          "label": "中央厨房与加工",
+          "minutes": 7
+        },
+        {
+          "id": "logistics",
+          "label": "仓储与干线运输",
+          "minutes": 2
+        },
+        {
+          "id": "store-receiving",
+          "label": "门店收货",
+          "minutes": 1.5
+        },
+        {
+          "id": "cashier",
+          "label": "收银与接单",
+          "minutes": 1
+        },
+        {
+          "id": "cooking",
+          "label": "汉堡与薯条制作",
+          "minutes": 4
+        },
+        {
+          "id": "packing",
+          "label": "组装与包装",
+          "minutes": 2
+        },
+        {
+          "id": "delivery",
+          "label": "司机与末端配送",
+          "minutes": 7
+        }
+      ]
+    }
+  ]
+}
