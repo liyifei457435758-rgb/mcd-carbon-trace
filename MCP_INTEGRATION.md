@@ -59,7 +59,7 @@ python scripts/normalize_mcp_menu.py --snapshot data/mcp_menu_snapshot.json --ou
 
 ## 本次验证记录
 
-2026-10-25，使用公开城市检索 `北京 / 天安门` 获取最近门店 `storeCode=1951020`，随后以 `orderType=1, beType=1` 调用 `query-meals`。MCP 返回 88 个餐品，并对 6 个选中套餐调用 `query-meal-detail`：`9900005466`、`9900016055`、`9900005462`、`9900005411`、`9900005453`、`9900005428`。网页当前使用 `data/mcp_meals.json` 中的这 6 个 MCP 编码。原料克重仍是本地筛选估算，因 MCP 未返回供应商配方克重。
+2026-10-25，使用公开城市检索 `北京 / 天安门` 获取匹配门店 `storeCode=1951020`，随后以 `orderType=1, beType=1` 调用 `query-meals`。MCP 返回 88 个餐品，并对 6 个选中套餐调用 `query-meal-detail`：`9900005466`、`9900016055`、`9900005462`、`9900005411`、`9900005453`、`9900005428`。网页当前使用 `data/mcp_meals.json` 中的这 6 个 MCP 编码。原料克重仍是本地筛选估算，因 MCP 未返回供应商配方克重。
 
 ## 离线降级
 
